@@ -1,0 +1,20 @@
+{
+  "version": "5",
+  "dialect": "pg",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1695880810887,
+      "tag": "0000_easy_apocalypse",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1696311259660,
+      "tag": "0001_uneven_yellowjacket",
+      "breakpoints": true
+    }
+  ]
+}
