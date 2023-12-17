@@ -1,1 +1,0 @@
-ALTER TABLE "poetry" DROP COLUMN IF EXISTS "class";

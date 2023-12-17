@@ -5,6 +5,8 @@ export default async function Home() {
 
   const result = await getSahasranam();
 
+  result?.reverse();
+
   return (
       <main className="flex min-h-screen flex-col items-center justify-between p-4">
         <div className="items-center flex-col justify-center h-full sm:mt-12  min-w-[70vw] flex relative">

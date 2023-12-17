@@ -25,7 +25,7 @@ const PoetrySimpleEl = ({id, text}:PoetrySimpleElProps) => {
   });
 
   return (
-    <div className='bg-white/70 min-w-[400px] p-4 my-3'>
+    <div >
         <div className='w-full flex text-2xl'>
             {isAdmin && (
               <span 

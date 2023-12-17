@@ -1,6 +1,6 @@
 "use server";
 
-import { eq } from "drizzle-orm";
+import { desc, eq } from "drizzle-orm";
 import { db } from "../db";
 import { poetry, sahasranam } from "../db/schema";
 
@@ -33,6 +33,8 @@ export const getSahasranam = async () => {
       let query = db
       .select()
       .from(sahasranam)
+      .orderBy(desc(sahasranam.createdAt));
+      
 
       const rows = await query;
 
