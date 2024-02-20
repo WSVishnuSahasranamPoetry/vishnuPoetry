@@ -29,52 +29,6 @@ const AdminPage = () => {
       <h3 className="text-xl font-semibold text-blue-900/70 my-1">
         Admin Panel
       </h3>
-      {isAdmin ? (
-        <form
-          className="flex-col flex "
-          onSubmit={async (e) => {
-            e.preventDefault();
-
-            if (email !== "kravdovidova33@mail.ru") {
-              return toast.error("Неверные данные администратора");
-            } else {
-              const { data: sUpData, error: sUpErr } =
-                await supabase.auth.signInWithOtp({
-                  email: email.trim(),
-                  options: {
-                    data: {
-                      username,
-                    },
-                  },
-                });
-
-              if (sUpErr) {
-                return toast.error(sUpErr.message);
-              }
-            }
-            toast.success("Ссылка для адмистрирования отправлена на почту");
-          }}
-        >
-          <input
-            className="mt-6 p-2"
-            value={email}
-            type="email"
-            placeholder="e-mail"
-            onChange={(e) => setEmail(e.target.value)}
-          />
-          <input
-            className="mt-3 p-2"
-            value={username}
-            type="text"
-            placeholder="Имя"
-            onChange={(e) => setUsername(e.target.value)}
-          />
-
-          <button className="bg-blue-600/70 transition duration-200 p-2 hover:bg-blue-400 mt-3">
-            Подтвердить
-          </button>
-        </form>
-      ) : (
         <div className="flex items-center flex-col justify-center">
           <div>
             <button
@@ -141,7 +95,7 @@ const AdminPage = () => {
             </form>
           )}
         </div>
-      )}
+      
     </main>
   );
 };
