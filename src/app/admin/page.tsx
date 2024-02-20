@@ -20,6 +20,7 @@ const AdminPage = () => {
     if (res.data.session) {
       setIsAdmin(true);
     }
+    return;
   });
 
   return (
@@ -28,7 +29,7 @@ const AdminPage = () => {
       <h3 className="text-xl font-semibold text-blue-900/70 my-1">
         Admin Panel
       </h3>
-      {!isAdmin ? (
+      {isAdmin ? (
         <form
           className="flex-col flex "
           onSubmit={async (e) => {

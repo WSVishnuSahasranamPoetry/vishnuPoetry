@@ -20,6 +20,7 @@ export const handleSahasraSubmit = async ({sahasraName, sahasraText}:{sahasraNam
 export const handleSimpleSubmit = async ({simpleText}:{simpleText: string}) => {
 
     if(simpleText === "") return;
+
   
     await db.insert(poetry)
     .values({
