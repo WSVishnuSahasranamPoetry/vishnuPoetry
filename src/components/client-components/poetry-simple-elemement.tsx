@@ -16,13 +16,9 @@ const PoetrySimpleEl = ({id, text}:PoetrySimpleElProps) => {
 
   const [supabase] = useState(() => createBrowserSupabaseClient());
 
-  const [isAdmin, setIsAdmin] = useState(false);
+  const [isAdmin, setIsAdmin] = useState(true);
 
-  supabase.auth.getSession().then((res) => {
-    if (res.data.session) {
-      setIsAdmin(true);
-    }
-  });
+
 
   return (
     <div >

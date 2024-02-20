@@ -17,13 +17,8 @@ const PoetryNameEl = ({name, text, index, id}:PoetryNameElProps) => {
 
   const [supabase] = useState(() => createBrowserSupabaseClient());
 
-  const [isAdmin, setIsAdmin] = useState(false);
+  const [isAdmin, setIsAdmin] = useState(true);
 
-  supabase.auth.getSession().then((res) => {
-    if (res.data.session) {
-      setIsAdmin(true);
-    }
-  });
 
   return (
     <div className='bg-white/70 min-w-[400px] p-4 my-3'>
