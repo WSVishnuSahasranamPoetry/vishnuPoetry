@@ -16,21 +16,12 @@ const PoetrySimpleEl = ({id, text}:PoetrySimpleElProps) => {
 
   const [supabase] = useState(() => createBrowserSupabaseClient());
 
-  const [isAdmin, setIsAdmin] = useState(true);
 
 
 
   return (
     <div >
         <div className='w-full flex text-2xl'>
-            {isAdmin && (
-              <span 
-                onClick={()=>{router.push(`/admin/editSimpe/${id}`)}}
-                className='text-blue-700 cursor-pointer ml-auto hover:text-red-600  text-sm'
-              >
-                Редактировать
-              </span>
-            )}
             </div>  
         <div className='text-sm p-4 whitespace-pre-wrap text-center sm:text-sm  font-bold'>{text}</div>
     </div>

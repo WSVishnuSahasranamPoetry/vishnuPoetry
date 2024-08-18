@@ -17,8 +17,6 @@ const PoetryNameEl = ({name, text, index, id}:PoetryNameElProps) => {
 
   const [supabase] = useState(() => createBrowserSupabaseClient());
 
-  const [isAdmin, setIsAdmin] = useState(true);
-
 
   return (
     <div className='bg-white/70 min-w-[400px] p-4 my-3'>
@@ -27,14 +25,6 @@ const PoetryNameEl = ({name, text, index, id}:PoetryNameElProps) => {
                 {index}
             </span>
               {name}
-            {isAdmin && (
-              <span 
-                onClick={()=>{router.push(`/admin/edit/${id}`)}}
-                className='text-blue-700 cursor-pointer ml-auto hover:text-red-600  text-sm'
-              >
-                Редактировать
-              </span>
-            )}
             </div>  
         <div className='text-sm p-4 whitespace-pre-wrap text-center sm:text-sm  font-bold'>{text}</div>
     </div>

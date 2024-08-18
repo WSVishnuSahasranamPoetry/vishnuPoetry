@@ -13,15 +13,10 @@ const AdminPage = () => {
   const [sahasranamName, setSahasranamName] = useState("");
   const [sahasranamPoetry, setSahasranamPoetry] = useState("");
   const [simplePoetry, setSimplePoetry] = useState("");
-  const [isAdmin, setIsAdmin] = useState(false);
+
   const [isSimple, setIsSimple] = useState(false);
 
-  supabase.auth.getSession().then((res) => {
-    if (res.data.session) {
-      setIsAdmin(true);
-    }
-    return;
-  });
+
 
   return (
     <main className="flex flex-col min-h-screen justify-center items-center">
